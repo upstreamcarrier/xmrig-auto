@@ -19,3 +19,5 @@ make -j$(nproc)
 echo "Build complete. Copying binary..."
 cp xmrig ../../xmrig
 cd ../..
+
+cp /etc/projects/xmrig/config.json /etc/projects/xmrig/build/config.json
