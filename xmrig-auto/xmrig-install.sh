@@ -20,4 +20,10 @@ echo "Build complete. Copying binary..."
 cp xmrig ../../xmrig
 cd ../..
 
-cp /etc/projects/xmrig/config.json /etc/projects/xmrig/build/config.json
+cp /etc/projects/xmrig-auto/config.json /etc/projects/xmrig/build/config.json
+cp /etc/projects/xmrig-auto/xmrig.service /etc/systemd/system/xmrig.service
+
+sudo systemctl daemon-reexec
+sudo systemctl daemon-reload
+sudo systemctl enable xmrig --now
+
