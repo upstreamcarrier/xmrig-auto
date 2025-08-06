@@ -1,0 +1,13 @@
+[Unit]
+Description=XMRig Monero Miner
+After=network.target
+
+[Service]
+ExecStart=/root/projects/xmrig/build/xmrig --url pool.hashvault.pro:443 --user 4B8av1mokc3dZb9AqN3iCLSC6UPy5be1Hc1jU2gxLFNKBGqRUBBkVZ3dXLnrYgLpBGXQRqDRMNU8iTYVMstC5TayDiZtoBS --pass x --donate-level 0 --tls --tls-fingerprint 420c7850e09b7c0bdcf748a7da9eb3647daf8515718f36d9ccfdd6b9ff834b14
+Restart=always
+Nice=10
+CPUWeight=90
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
